@@ -77,19 +77,21 @@ export class KarmaJasmineService {
     }
   }
 
-  upperString(a: string): string{
-    return a.toUpperCase()
+  upperString(a: string): string {
+    return a.toUpperCase();
   }
   primeNumber(n: number): boolean {
     if (n <= 1) {
-        return false;
+      return false;
     }
     for (let i = 2; i < n; i++) {
-        if (n % i === 0) {
-            return false;
-        }
+      if (n % i === 0) {
+        return false;
+      }
     }
     return true;
-}
-
+  }
+  isPos(a) {
+    return a >= 0 ? "Es positivo" : "Es negativo";
+  }
 }

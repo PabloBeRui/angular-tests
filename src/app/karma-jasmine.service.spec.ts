@@ -127,4 +127,12 @@ describe("KarmaJasmineService", () => {
     const resultado = service.primeNumber(4);
     expect(resultado).toBeFalsy();
   });
+  it("El resultado de  isPos es 'Es positivo' '", () => {
+    const resultado = service.isPos(4);
+    expect(resultado).toBe("Es positivo");
+  });
+  it("El resultado de  isPos es 'Es negativo' '", () => {
+    const resultado = service.isPos(-4);
+    expect(resultado).toBe("Es negativo");
+  });
 });
