@@ -110,4 +110,8 @@ describe("KarmaJasmineService", () => {
     const resultado = service.maxNum(1, 3);
     expect(resultado).toBe(3);
   });
+  it("El resultado de  upperString es 'OLA K ASE'", () => {
+    const resultado = service.upperString("ola k ase");
+    expect(resultado).toBe("OLA K ASE");
+  });
 });

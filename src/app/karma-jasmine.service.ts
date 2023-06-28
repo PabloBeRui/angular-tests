@@ -76,4 +76,8 @@ export class KarmaJasmineService {
       return b;
     }
   }
+
+  upperString(a: string): string{
+    return a.toUpperCase()
+  }
 }
