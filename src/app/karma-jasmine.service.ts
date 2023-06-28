@@ -22,13 +22,16 @@ export class KarmaJasmineService {
     return a / b;
   }
 
+  // numPar(x: number): string {
+  //   const y = x % 2;
+  //   if (y === 0) {
+  //     return "es par";
+  //   } else {
+  //     return "es impar";
+  //   }
+  // }
   numPar(x: number): string {
-    const y = x % 2;
-    if (y === 0) {
-      return "es par";
-    } else {
-      return "es impar";
-    }
+    return x % 2 === 0 ? "es par" : "es impar";
   }
   esPalindromo(cadena: string): string {
     const cadenaNormalizada = cadena.replace(/[\W_]/g, "").toLowerCase();
