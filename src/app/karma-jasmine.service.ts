@@ -91,21 +91,27 @@ export class KarmaJasmineService {
     }
     return true;
   }
+  // Función para verificar si un número es positivo
   isPos(a: number): string {
     return a >= 0 ? "Es positivo" : "Es negativo";
   }
+  // Función para obtener el número de elementos en un array
   arrayLength(a: any[]): number {
     return a.length;
   }
+  // Función para verificar si una cadena contiene un substring
   substringContent(a: string, b: string): string {
     return a.includes(b) ? "incluye un substring" : "no incluye un substring";
   }
+  // Función para obtener el promedio de un array de números
   arrayAvg(x: number[]): string {
     return (x.reduce((a, b) => a + b, 0) / x.length).toFixed(2);
   }
+  // Función para convertir una cadena en un array de caracteres
   stringToCArray(a: string): string[] {
     return a.split("");
   }
+  // Función para calcular la suma de los dígitos de un número
   sumDig(a: number): number {
     let sum = 0;
     const digits = a.toString().split("");
