@@ -66,4 +66,14 @@ export class KarmaJasmineService {
   }
 
   //**any */
+
+  maxNum(a: number, b: number): number | string {
+    if (a === b) {
+      return "son iguales";
+    } else if (a > b) {
+      return a;
+    } else {
+      return b;
+    }
+  }
 }
