@@ -175,4 +175,13 @@ describe("KarmaJasmineService", () => {
     const resultado = service.sumDig(10);
     expect(resultado).toBe(1);
   });
+  it("El resultado de anagram es true'", () => {
+    const resultado = service.anagram("hola", "aloh");
+    expect(resultado).toBe(true);
+  });
+
+  it("El resultado de anagram es false'", () => {
+    const resultado = service.anagram("holas", "taloh");
+    expect(resultado).toBe(false);
+  });
 });

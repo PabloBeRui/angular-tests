@@ -103,17 +103,37 @@ export class KarmaJasmineService {
   arrayAvg(x: number[]): string {
     return (x.reduce((a, b) => a + b, 0) / x.length).toFixed(2);
   }
-  stringToCArray(a: string):string[] {
-    return a.split("")
+  stringToCArray(a: string): string[] {
+    return a.split("");
   }
   sumDig(a: number): number {
     let sum = 0;
-    const digits = a.toString().split('');
+    const digits = a.toString().split("");
     for (const digit of digits) {
       sum += parseInt(digit);
     }
     return sum;
   }
 
+  // Función para verificar si una cadena es un anagrama de otra(mismas letras pero distintas posiciones)
+  anagram(a: string, b: string): boolean {
+    if (a.length !== b.length) {
+      return false;
+    }
 
+    const sortA = a
+      .toLowerCase()
+      .replace(/ +/g, "")
+      .split("")
+      .sort()
+      .toString();
+    const sortB = b
+      .toLowerCase()
+      .replace(/ +/g, "")
+      .split("")
+      .sort()
+      .toString();
+
+    return sortA === sortB;
+  }
 }
