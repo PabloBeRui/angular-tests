@@ -159,4 +159,12 @@ describe("KarmaJasmineService", () => {
     const resultado = service.arrayAvg([4, 2, 3, -1, 3]);
     expect(resultado).toBe("2.20");
   });
+  it("El resultado de atringToCArray ['P','a','b','l','o']'", () => {
+    const resultado = service.stringToCArray("Pablo");
+    expect(resultado).toEqual(["P", "a", "b", "l", "o"]);
+  });
+  it("El resultado de atringToCArray ['1','2','3','1','a']'", () => {
+    const resultado = service.stringToCArray("1231a");
+    expect(resultado).toEqual(["1", "2", "3", "1", "a"]);
+  });
 });

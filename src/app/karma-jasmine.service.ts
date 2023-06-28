@@ -103,4 +103,7 @@ export class KarmaJasmineService {
   arrayAvg(x: number[]): string {
     return (x.reduce((a, b) => a + b, 0) / x.length).toFixed(2);
   }
+  stringToCArray(a: string):string[] {
+    return a.split("")
+  }
 }
