@@ -21,4 +21,13 @@ export class KarmaJasmineService {
   dividir(a: number, b: number): number {
     return a / b;
   }
+
+  numPar(x: number): string {
+    const y = x % 2;
+    if (y === 0) {
+      return "es par";
+    } else {
+      return "es impar";
+    }
+  }
 }

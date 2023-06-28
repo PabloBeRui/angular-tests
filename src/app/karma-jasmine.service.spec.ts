@@ -65,4 +65,14 @@ describe("KarmaJasmineService", () => {
     const resultado = service.dividir(1, 0);
     expect(resultado).toBe(Infinity);
   });
+
+  it("el resultado debería ser par", () => {
+    const resultado = service.numPar(2);
+    expect(resultado).toBe("es par");
+  });
+
+  it("el resultado debería ser impar", () => {
+    const resultado = service.numPar(3);
+    expect(resultado).toBe("es impar");
+  });
 });
