@@ -75,4 +75,12 @@ describe("KarmaJasmineService", () => {
     const resultado = service.numPar(3);
     expect(resultado).toBe("es impar");
   });
+  it("El resultado tendría que ser un palíndromo", () => {
+    const resultado = service.esPalindromo("caac");
+    expect(resultado).toBe("Es palindromo");
+  });
+  it("El resultado no tendría que ser un palíndromo", () => {
+    const resultado = service.esPalindromo("caballo");
+    expect(resultado).toBe("No es palindromo");
+  });
 });
