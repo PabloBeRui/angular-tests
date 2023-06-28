@@ -83,4 +83,19 @@ describe("KarmaJasmineService", () => {
     const resultado = service.esPalindromo("caballo");
     expect(resultado).toBe("No es palindromo");
   });
+  it("El resultado del factorial indica que no puede ser un número negativo", () => {
+    const resultado = service.factorial(-1);
+    expect(resultado).toBe(
+      "El factorial no está definido para números negativos"
+    );
+  });
+  it("El resultado del factorial va a ser siempre 1", () => {
+    const resultado = service.factorial(0);
+    expect(resultado).toBe(1);
+  });
+
+  it("El resultado del factorial 8 es 40320", () => {
+    const resultado = service.factorial(8);
+    expect(resultado).toBe(40320);
+  });
 });

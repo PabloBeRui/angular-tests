@@ -33,7 +33,9 @@ export class KarmaJasmineService {
   esPalindromo(cadena: string): string {
     const cadenaNormalizada = cadena.replace(/[\W_]/g, "").toLowerCase();
     const cadenaReversa = cadenaNormalizada.split("").reverse().join("");
-    return cadenaNormalizada === cadenaReversa ? "Es palindromo" : "No es palindromo";
+    return cadenaNormalizada === cadenaReversa
+      ? "Es palindromo"
+      : "No es palindromo";
   }
 
   // *****************************************************************************************************************************************************
@@ -49,4 +51,16 @@ export class KarmaJasmineService {
 
   // Entonces, cadena.replace(/[\W_]/g, '') está reemplazando todos los caracteres en la cadena de texto que no sean letras, números, o que sean guiones bajos, con nada
   // *****************************************************************************************************************************************************
+
+  factorial(n: number): any {
+    if (n < 0) {
+      return "El factorial no está definido para números negativos";
+    } else if (n === 0 || n === 1) {
+      return 1;
+    } else {
+      return n * this.factorial(n - 1);
+    }
+  }
+
+  //**any */
 }
