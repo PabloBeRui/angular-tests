@@ -114,4 +114,17 @@ describe("KarmaJasmineService", () => {
     const resultado = service.upperString("ola k ase");
     expect(resultado).toBe("OLA K ASE");
   });
+  it("El resultado de  primeNumber es true'", () => {
+    const resultado = service.primeNumber(3);
+    expect(resultado).toBeTruthy();
+  });
+  it("El resultado de  primeNumber es false'", () => {
+    const resultado = service.primeNumber(1);
+    expect(resultado).toBeFalsy();
+  });
+
+  it("El resultado de  primeNumber es false'", () => {
+    const resultado = service.primeNumber(4);
+    expect(resultado).toBeFalsy();
+  });
 });
