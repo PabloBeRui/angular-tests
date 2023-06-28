@@ -135,4 +135,12 @@ describe("KarmaJasmineService", () => {
     const resultado = service.isPos(-4);
     expect(resultado).toBe("Es negativo");
   });
+  it("El resultado de arrayLength es 3", () => {
+    const resultado = service.arrayLength(["hola", "k", "ase"]);
+    expect(resultado).toBe(3);
+  });
+  it("El resultado de arrayLength es 0", () => {
+    const resultado = service.arrayLength([]);
+    expect(resultado).toBe(0);
+  });
 });

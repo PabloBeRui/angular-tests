@@ -91,7 +91,10 @@ export class KarmaJasmineService {
     }
     return true;
   }
-  isPos(a) {
+  isPos(a: number): string {
     return a >= 0 ? "Es positivo" : "Es negativo";
+  }
+  arrayLength(a: any[]): number {
+    return a.length;
   }
 }
