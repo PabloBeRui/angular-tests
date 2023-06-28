@@ -151,4 +151,12 @@ describe("KarmaJasmineService", () => {
     const resultado = service.substringContent("hola hello", "pella");
     expect(resultado).toBe("no incluye un substring");
   });
+  it("El resultado de arrayAvg es 6'", () => {
+    const resultado = service.arrayAvg([1, 2, 3]);
+    expect(resultado).toBe("2.00");
+  });
+  it("El resultado de arrayAvg es 8'", () => {
+    const resultado = service.arrayAvg([4, 2, 3, -1, 3]);
+    expect(resultado).toBe("2.20");
+  });
 });

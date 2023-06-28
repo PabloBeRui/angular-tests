@@ -100,4 +100,7 @@ export class KarmaJasmineService {
   substringContent(a: string, b: string): string {
     return a.includes(b) ? "incluye un substring" : "no incluye un substring";
   }
+  arrayAvg(x: number[]): string {
+    return (x.reduce((a, b) => a + b, 0) / x.length).toFixed(2);
+  }
 }
