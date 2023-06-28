@@ -97,4 +97,7 @@ export class KarmaJasmineService {
   arrayLength(a: any[]): number {
     return a.length;
   }
+  substringContent(a: string, b: string): string {
+    return a.includes(b) ? "incluye un substring" : "no incluye un substring";
+  }
 }

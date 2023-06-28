@@ -143,4 +143,12 @@ describe("KarmaJasmineService", () => {
     const resultado = service.arrayLength([]);
     expect(resultado).toBe(0);
   });
+  it("El resultado de substringContent es 'incluye un substring'", () => {
+    const resultado = service.substringContent("hola hello", "hello");
+    expect(resultado).toBe("incluye un substring");
+  });
+  it("El resultado de substringContent es 'no incluye un substring'", () => {
+    const resultado = service.substringContent("hola hello", "pella");
+    expect(resultado).toBe("no incluye un substring");
+  });
 });
