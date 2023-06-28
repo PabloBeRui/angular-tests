@@ -106,4 +106,14 @@ export class KarmaJasmineService {
   stringToCArray(a: string):string[] {
     return a.split("")
   }
+  sumDig(a: number): number {
+    let sum = 0;
+    const digits = a.toString().split('');
+    for (const digit of digits) {
+      sum += parseInt(digit);
+    }
+    return sum;
+  }
+
+
 }

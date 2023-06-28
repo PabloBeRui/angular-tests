@@ -167,4 +167,12 @@ describe("KarmaJasmineService", () => {
     const resultado = service.stringToCArray("1231a");
     expect(resultado).toEqual(["1", "2", "3", "1", "a"]);
   });
+  it("El resultado de sumDig es 8'", () => {
+    const resultado = service.sumDig(53);
+    expect(resultado).toBe(8);
+  });
+  it("El resultado de sumDig es 1'", () => {
+    const resultado = service.sumDig(10);
+    expect(resultado).toBe(1);
+  });
 });
