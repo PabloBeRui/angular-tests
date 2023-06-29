@@ -157,4 +157,14 @@ export class KarmaJasmineService {
 
     return "No hay ningún número duplicado";
   }
+
+  // Función para calcular el número de días entre dos fechas:
+
+  totalDays(a: Date, b: Date): number {
+    if (b.getTime() >= a.getTime()) {
+      return Math.ceil((b.getTime() - a.getTime()) / (1000 * 60 * 60 * 24));
+    } else {
+      return Math.ceil((a.getTime() - b.getTime()) / (1000 * 60 * 60 * 24));
+    }
+  }
 }

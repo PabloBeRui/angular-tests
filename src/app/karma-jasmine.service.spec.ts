@@ -192,4 +192,19 @@ describe("KarmaJasmineService", () => {
     const resultado = service.repeatedNum([1, 2, 2, 4]);
     expect(resultado).toBe("El número repetido es 2");
   });
+  it("El resultado de total days es 3'", () => {
+    const resultado = service.totalDays(
+      new Date("2023-07-04"),
+      new Date("2023-07-01")
+    );
+    expect(resultado).toBe(3);
+  });
+
+  it("El resultado de total days es 3'", () => {
+    const resultado = service.totalDays(
+      new Date("2023-07-01"),
+      new Date("2023-07-05")
+    );
+    expect(resultado).toBe(4);
+  });
 });
