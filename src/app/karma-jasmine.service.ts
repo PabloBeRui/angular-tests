@@ -142,4 +142,19 @@ export class KarmaJasmineService {
 
     return sortA === sortB;
   }
+
+  // Función para encontrar el número duplicado en un array de números:
+
+  repeatedNum(a: number[]): number | string {
+    const numCount: number[] = [];
+
+    for (const num of a) {
+      if (numCount.includes(num)) {
+        return `El número repetido es ${num}`;
+      }
+      numCount.push(num);
+    }
+
+    return "No hay ningún número duplicado";
+  }
 }

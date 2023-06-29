@@ -184,4 +184,12 @@ describe("KarmaJasmineService", () => {
     const resultado = service.anagram("holas", "taloh");
     expect(resultado).toBe(false);
   });
+  it("El resultado de repeatedNum es 'No hay ningún número duplicado'", () => {
+    const resultado = service.repeatedNum([1, 2, 3, 4]);
+    expect(resultado).toBe("No hay ningún número duplicado");
+  });
+  it("El resultado de repeatedNum es 'El número repetido es 2'", () => {
+    const resultado = service.repeatedNum([1, 2, 2, 4]);
+    expect(resultado).toBe("El número repetido es 2");
+  });
 });
